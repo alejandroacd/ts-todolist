@@ -1,0 +1,43 @@
+.card {
+    backdrop-filter: blur(0px) saturate(200%);
+    -webkit-backdrop-filter: blur(0px) saturate(200%);
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    border-radius: 15px;
+    width: 95%;
+    height: 90vh;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card .title_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    height: 15vh;
+    justify-content: center;
+}
+.card .title_container svg {
+    margin-top: 0.5em;
+    color: var(--black);
+    fill:green;
+    
+}
+
+h1 {
+    margin:0.5em;
+    text-align: center; 
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    color:var(--black)
+}
+
+@media screen and (min-width: 768px) {
+    .card {
+        width: 50%;
+        height: 80vh;
+    }
+}
