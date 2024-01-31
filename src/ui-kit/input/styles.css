@@ -1,0 +1,25 @@
+.input_text {
+    width: 90%;
+    margin:0 auto;
+    border: 1px solid #c1c1c1;
+    background-color: #f4f4f47a;
+    border-radius: 12px;
+    padding:1em;
+    transition: 0.1ms ease;
+    font-size: 1em;
+}
+.input_text::placeholder {
+    font-size: 1.2em;
+}
+
+.input_text:focus {
+    outline: none;
+    border: 2px solid #c1c1c1;
+}
+
+@media screen and (max-width: 768px) {
+    .input_text {
+        width: 95%;
+    }
+}
+
