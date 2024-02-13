@@ -1,7 +1,8 @@
-import './index.css'
-import Input from '../../ui-kit/input/input'
+import './index.css';
+import Input from '../../ui-kit/input';
 import { CiCircleCheck } from "react-icons/ci";
-
+import List from '../list/List';
+import { tasks } from '../../tasks';
 const Card = () : JSX.Element => {
     return (
         <>
@@ -12,6 +13,7 @@ const Card = () : JSX.Element => {
             </div>
          
         <Input title='Enter a new task...' />
+        <List todos={tasks} />
         </div>
         </>
     )

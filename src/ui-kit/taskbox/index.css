@@ -1,0 +1,96 @@
+.taskbox {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top:1em;
+    position: relative;
+    right:1.5em;
+    color:#858585;
+    font-weight: bold;
+    font-size: 15px;
+    justify-content: space-between;
+}
+
+.taskbox_info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding:0.5em;
+}
+.taskbox_info svg {
+    cursor: pointer;
+    position:relative;
+    top:0.5em;
+}
+
+.task_other_info {
+    width: 100%;
+    height:0px;
+    overflow: hidden;
+    margin-top:1em;
+    transition: 0.4s;
+}
+
+.task_other_info textarea {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: 0.5px solid #D8D6DE;
+    border-radius: 5px;
+    padding:1em;
+}
+
+.task_other_info textarea::placeholder {
+    padding: 0.3em;
+}
+
+
+.checkbox_container .taskbox_checkbox:checked ~ .taskbox_checkmark:after {
+    opacity: 1;
+}
+.checkbox_container .taskbox_checkbox:checked ~ .taskbox_checkmark {
+    background-color: #8ADAB2;
+    border: none;
+    border-radius: 50%;
+}
+.checkbox_container {
+    font-size:1em;
+    position: relative;
+    top:0.4em;
+    margin-right: 0.7em;
+}
+    .taskbox_checkbox {
+        display: none;
+    }
+    .taskbox_checkmark {
+        border-radius: 50%;
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        height: 1.5em;
+        width: 1.5em;
+        border: 1.5px solid #D8D6DE;
+    }
+
+    .taskbox_checkmark:after {
+        content: "";
+        position: absolute;
+        border: solid white;
+        border-width: 0 0.15em 0.15em 0;
+        top: 0.25em;
+        left: 0.60em;
+        height: 0.89em;
+        width: 0.35em;
+        transform: rotate(45deg);
+        opacity: 0;
+        transition: 0.3s;
+    }
+    
+    .linetrough {
+        text-decoration: line-through;
+    }

@@ -10,6 +10,9 @@
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 .card .title_container {
@@ -19,11 +22,11 @@
     align-content: center;
     height: 15vh;
     justify-content: center;
+ 
 }
 .card .title_container svg {
     margin-top: 0.5em;
     color: var(--black);
-    fill:green;
     
 }
 

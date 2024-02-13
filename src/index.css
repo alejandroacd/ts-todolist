@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap');
 
+
 :root {
   --black: #858585;
 }
@@ -9,10 +10,9 @@
   font-family: 'Noto Sans JP', sans-serif;
 }
 
-*, *::before, *::after {
+*, *:before, *:after {
   box-sizing: border-box;
 }
-
 img, video, svg {
   display: block;
   height: auto;
@@ -32,4 +32,19 @@ body {
         radial-gradient(at 82% 65%, hsl(0.00, 0%, 100%) 0, transparent 55%);
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
 
+::-webkit-scrollbar-thumb {
+  background-color: #f1f1f1;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #c1c1c1;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
