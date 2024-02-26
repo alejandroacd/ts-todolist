@@ -1,8 +1,9 @@
 export interface Todo {
     id: string,
     title: string,
-    priority: string,
-    completed: boolean
+    priority?: string,
+    completed: boolean,
+    description?: string
 }
 
 export type TodoId = Pick<Todo, 'id'>

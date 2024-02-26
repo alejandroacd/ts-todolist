@@ -1,0 +1,19 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+}
+
+.footer_span {
+    font-weight: bold;
+}
+
+.footer svg {
+    fill: #2F75C0;
+    display: inline;
+}
+
+.footer .heart {
+    fill: rgba(206, 14, 14, 0.801);
+}
