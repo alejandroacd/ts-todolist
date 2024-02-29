@@ -5,6 +5,7 @@
   --black: #858585;
 }
 
+
 * {
   min-width: 0;
   font-family: 'Noto Sans JP', sans-serif;
@@ -25,6 +26,37 @@ img, video, svg {
   height: 95vh;
   align-items: center;
 }
+
+.fade-in {
+  opacity: 0; 
+  animation: fadeIn 0.3s ease-in forwards; 
+}
+
+.task-fade-in {
+  opacity: 0; 
+  animation: taskBoxFadeIn 0.1s ease-in forwards; 
+}
+@keyframes taskboxFadeIn {
+  from {
+    opacity: 0; 
+    transform: translateY(-20px); 
+  }
+  to {
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; 
+   
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 body {
  background-color: #f9f9f9;
     background-image: 

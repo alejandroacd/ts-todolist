@@ -8,10 +8,13 @@ export const dropDownArrow = (id: string | TodoId) => {
  
 }
 
+/*  ------------------------- FUNCTION REPLACED BY CONDITIONAL CSS STATEMENT -------------------------
+
 export const linetrough = (id: string | TodoId) => {
     const elem: HTMLElement | null | undefined = document.getElementById(id as string)?.parentElement;
     const parentDiv: HTMLElement | null | undefined = elem?.getElementsByTagName('div')[0];
     const title: HTMLElement | null | undefined = parentDiv?.getElementsByTagName('span')[1];
     if (title!.style.textDecoration === 'line-through') title!.style.textDecoration = 'none';
     else title!.style.textDecoration = 'line-through';
-} // terminar esta función, para subrayar el texto de las tareas
+} 
+ */

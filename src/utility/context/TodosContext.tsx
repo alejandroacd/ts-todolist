@@ -6,7 +6,8 @@ type TodosContextType = {
     setTodos: React.Dispatch<React.SetStateAction<Todo[]>>
     addTodo: (todo: Todo) => void,
     deleteTodo: (id: string | TodoId) => void,
-    addDescription: (id: string | TodoId, description: string) => void
+    addDescription: (id: string | TodoId, description: string) => void,
+    markAsCompleted: (id: string | TodoId) => void
 }
 export const TodosContext = createContext<TodosContextType>({} as TodosContextType)
 export const useTodos = () => useContext(TodosContext)
@@ -20,8 +21,8 @@ export const TodosProvider = ({ children }: ChildrenProp) => {
     const [todos, setTodos] = useState<Todo[]>(savedTodos);
 
     const addTodo = (todo: Todo) => {
-        setTodos([...todos, todo])
-        localStorage.setItem('todos', JSON.stringify([...todos, todo]))
+        setTodos([todo, ...todos])
+        localStorage.setItem('todos', JSON.stringify([todo, ...todos]))
     }
 
     const deleteTodo = (id: string | TodoId) => {
@@ -37,12 +38,22 @@ export const TodosProvider = ({ children }: ChildrenProp) => {
             localStorage.setItem('todos', JSON.stringify([...todos]))
         }
     }
+
+    const markAsCompleted = (id: string | TodoId) => {
+        const todoToUpdate = todos.find((todo) => todo.id === id)
+        if (todoToUpdate) {
+            todoToUpdate.completed = !todoToUpdate.completed
+            setTodos([...todos])
+            localStorage.setItem('todos', JSON.stringify([...todos]))
+        }
+    }
     const value = {
         todos,
         setTodos,
         addTodo,
         deleteTodo,
-        addDescription
+        addDescription,
+        markAsCompleted
     }
     return (
         <TodosContext.Provider value={value}>

@@ -12,8 +12,10 @@
 .footer svg {
     fill: #2F75C0;
     display: inline;
+    filter: none;
 }
 
 .footer .heart {
     fill: rgba(206, 14, 14, 0.801);
 }
+

@@ -5,7 +5,7 @@ import './styles.css'
 const Footer = () => {
     return (
         <footer className="footer">
-            Made it with love by  &nbsp; <span className="footer_span"> Alejandro Contreras</span>  &nbsp; using  &nbsp; <SiTypescript size={20} /> <FaHeart className="heart" size={20} />
+            made with love by &nbsp;<strong>Alejandro Contreras</strong>&nbsp; using  &nbsp; <SiTypescript /> <FaHeart className="heart" />
         </footer>
     )
 }
