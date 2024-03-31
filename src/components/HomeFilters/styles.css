@@ -1,0 +1,21 @@
+.filters_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5em;
+    width: 100%;
+    padding:0.5em;
+}
+
+.filters_container h1 {
+    font-size: 1em;
+    color: var(--black);
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.buttons-container {
+    display: flex;
+    gap:0.5em
+
+}

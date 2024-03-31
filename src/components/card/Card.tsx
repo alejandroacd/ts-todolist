@@ -1,22 +1,28 @@
 import './index.css';
 import Input from '../../ui-kit/input';
+import HomeFilters from '../HomeFilters/index';
 import { CiCircleList } from "react-icons/ci";
 import List from '../list/List';
 import { useTodos } from '../../utility/context/TodosContext';
+import { useEffect } from 'react';
 const Card = (): JSX.Element => {
-    const { todos } = useTodos();
-
-
+    const { filterSelected, todos, filters } = useTodos();
+    useEffect(() => {
+        console.log(filters)
+    }, [filterSelected])
     return (
         <>
             <div className="card fade-in">
                 <div className='title_container'>
                     <CiCircleList size={30} />
-                    <h1>things to do </h1>
+                    <h1 className='title'>Things to do </h1>
                 </div>
 
                 <Input title='Enter a new task...' />
-                <List todos={todos} />
+                <div className='filters'>
+                    <HomeFilters />
+                </div>
+                <List todos={filterSelected} />
             </div>
         </>
     )

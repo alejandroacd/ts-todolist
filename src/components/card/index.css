@@ -30,7 +30,7 @@
     
 }
 
-h1 {
+.title {
     margin:0.5em;
     text-align: center; 
     font-size: 2.5em;
@@ -43,4 +43,7 @@ h1 {
         width: 50%;
         height: 80vh;
     }
+}
+.filters {
+    width: 95%;
 }

@@ -8,9 +8,7 @@ interface ChildProps {
 
 const List: React.FC<ChildProps> = ({todos}) => {
     const { deleteTodo, addDescription, markAsCompleted } = useTodos()
-    console.log(todos)
-    return (
-        
+    return (        
         <ul className="list">
             
             {todos?.map((todo) => (

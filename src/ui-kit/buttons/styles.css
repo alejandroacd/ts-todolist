@@ -1,0 +1,11 @@
+button {
+    background-color: transparent;
+    border:1px solid #dfdfdf88;
+    min-width: 70px;
+    border-radius: 5px;
+}
+
+.selected {
+    background-color: #dfdfdf88;
+    border: 1px solid var(--black)
+}
