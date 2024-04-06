@@ -10,7 +10,9 @@ type TodosContextType = {
     markAsCompleted: (id: string | TodoId) => void,
     filterSelected: Todo[],
     filters: any,
-    setFilterSelected: React.Dispatch<React.SetStateAction<Todo[]>>
+    setFilterSelected: React.Dispatch<React.SetStateAction<Todo[]>>,
+    isSorted: boolean,
+    setIsSorted: React.Dispatch<React.SetStateAction<boolean>>
 }
 export const TodosContext = createContext<TodosContextType>({} as TodosContextType)
 export const useTodos = () => useContext(TodosContext)
@@ -22,6 +24,7 @@ type ChildrenProp = {
 export const TodosProvider = ({ children }: ChildrenProp) => {
     const savedTodos = JSON.parse(localStorage.getItem('todos') || '[]')
     const [todos, setTodos] = useState<Todo[]>(savedTodos);
+    const [isSorted, setIsSorted] = useState<boolean>(false)
     const [filters] = useState({
         all: todos.map((todo) => todo),
         pending: todos.filter((todo) => !todo.completed),
@@ -74,6 +77,8 @@ export const TodosProvider = ({ children }: ChildrenProp) => {
         markAsCompleted,
         filterSelected,
         setFilterSelected,
+        isSorted,
+        setIsSorted,
         filters
     }
     return (

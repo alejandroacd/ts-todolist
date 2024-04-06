@@ -7,9 +7,7 @@ import { useTodos } from '../../utility/context/TodosContext';
 import { useEffect } from 'react';
 const Card = (): JSX.Element => {
     const { filterSelected, todos, filters } = useTodos();
-    useEffect(() => {
-        console.log(filters)
-    }, [filterSelected])
+
     return (
         <>
             <div className="card fade-in">

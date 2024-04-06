@@ -28,11 +28,28 @@
     width: 100%;
     justify-content: space-between;
     padding:0.5em;
+
+    .taskbox_title .taskbox_text {
+        
+        @media screen and (min-width: 768px) {
+            font-size: 1.1em;
+            
+        }
+    }
 }
 .taskbox_info svg {
     cursor: pointer;
     position:relative;
     top:0.5em;
+    transform: rotate(0deg);
+    transition: 0.1s;
+}
+
+@media screen and (min-width: 768px) {
+    .taskbox_info svg {
+        top:0.2em;
+        font-size: 1.7em;
+    }
 }
 
 .task_other_info {

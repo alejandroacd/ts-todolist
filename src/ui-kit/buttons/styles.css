@@ -3,6 +3,7 @@ button {
     border:1px solid #dfdfdf88;
     min-width: 70px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .selected {
