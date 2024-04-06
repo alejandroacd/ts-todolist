@@ -4,9 +4,8 @@ import HomeFilters from '../HomeFilters/index';
 import { CiCircleList } from "react-icons/ci";
 import List from '../list/List';
 import { useTodos } from '../../utility/context/TodosContext';
-import { useEffect } from 'react';
 const Card = (): JSX.Element => {
-    const { filterSelected, todos, filters } = useTodos();
+    const { filterSelected} = useTodos();
 
     return (
         <>

@@ -1,7 +1,6 @@
 import { Todo } from "../../types/types"
 import TaskBox from "../../ui-kit/taskbox"
 import { DndContext, closestCenter, MouseSensor, useSensor, useSensors } from "@dnd-kit/core"
-import { dropDownArrow } from "../../ui-kit/taskbox/utils"
 import { arrayMove, SortableContext, verticalListSortingStrategy } from "@dnd-kit/sortable"
 import './styles.css'
 import { useTodos } from "../../utility/context/TodosContext"

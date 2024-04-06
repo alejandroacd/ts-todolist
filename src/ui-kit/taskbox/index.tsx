@@ -4,9 +4,7 @@ import { dropDownArrow } from "./utils";
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import './index.css'
-import { useTodos } from "../../utility/context/TodosContext";
 import { useState } from "react";
-import { useSensor, useSensors, PointerSensor } from "@dnd-kit/core";
 interface ChildProps {
     todo: Todo,
     id: string | TodoId,
